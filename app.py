@@ -30,9 +30,10 @@ def add_numbers_post():
   	      total = 0
   	      try:
   	      	for str_num in request.form['text'].split():
-  	      		avg = (total + int(str_num)) / len(request.form['text'].split())
+			length = len(request.form['text'].split())
+  	      		total += int(str_num)
 			#avg = total/(len(request.form['text'].split()))
-  	      	return render_template('add_numbers.html', result=str(avg))
+  	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
