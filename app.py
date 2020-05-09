@@ -32,6 +32,7 @@ def add_numbers_post():
   	      	for str_num in request.form['text'].split():
 			#length = len(request.form['text'].split())
   	      		total += int(str_num)
+			avg = 0
 			#average = total/(len(request.form['text'].split()))
   	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:
