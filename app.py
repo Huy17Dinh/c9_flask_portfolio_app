@@ -33,7 +33,7 @@ def add_numbers_post():
 			#length = len(request.form['text'].split())
   	      		total += int(str_num)
 			average = total/(len(request.form['text'].split()))
-  	      	return render_template('add_numbers.html', result=str(average))
+  	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
