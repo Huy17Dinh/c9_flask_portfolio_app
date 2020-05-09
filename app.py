@@ -3,7 +3,7 @@ import datetime
 import pytz # timezone 
 import requests
 import os
-
+import statistics
 
 
 
@@ -30,7 +30,7 @@ def add_numbers_post():
   	      total = 0
   	      try:
   	      	for str_num in request.form['text'].split():
-			length = len(request.form['text'].split())
+			#length = len(request.form['text'].split())
   	      		total += int(str_num)
 			#avg = total/(len(request.form['text'].split()))
   	      	return render_template('add_numbers.html', result=str(total))
